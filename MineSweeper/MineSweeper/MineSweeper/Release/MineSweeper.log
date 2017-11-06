@@ -45,8 +45,8 @@ main.cpp(294): warning C4244: 'argument': conversion from 'int' to 'float', poss
 main.cpp(298): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 main.cpp(321): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating code
-  18 of 92 functions (19.6%) were compiled, the rest were copied from previous compilation.
+  1 of 92 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  MineSweeper.vcxproj -> D:\All Projects\C++\SDL2\MineSweeper\MineSweeper\Release\MineSweeper.exe
+  MineSweeper.vcxproj -> D:\All Projects\GitHub\SDL2-MineSweeper\MineSweeper\MineSweeper\Release\MineSweeper.exe

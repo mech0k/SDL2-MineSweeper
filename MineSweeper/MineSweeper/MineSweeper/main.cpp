@@ -114,7 +114,7 @@ int wmain() {
 					}
 				}
 				else if (e.button.button == SDL_BUTTON_RIGHT) {
-					if(!checkWin()){
+					if(!checkWin() && !sadFace){
 						if (firstClick && e.button.x > 12 * MULT && e.button.x < SCREEN_WIDTH - 12 * MULT && e.button.y > 50 * MULT && e.button.y < SCREEN_HEIGHT - 12 * MULT) {
 							int mouseX = (e.button.x - 12 * MULT) / (16 * MULT);
 							int mouseY = (e.button.y - 50 * MULT) / (16 * MULT);
