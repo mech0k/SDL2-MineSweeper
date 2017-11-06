@@ -36,6 +36,7 @@ int currentState = NORMAL;
 const int wCells = (SCREEN_WIDTH - 24 * MULT) / (16 * MULT);
 const int hCells = (SCREEN_HEIGHT - 62 * MULT) / (16 * MULT);
 Cell allCells[hCells][wCells];
+int currentSelect[2] = { -1, -1 };
 
 void drawASign(int n, float x0, float y0);
 void drawBorder();
@@ -49,6 +50,7 @@ void endGame();
 void revealAll();
 void restart();
 void smileState(int &cycle, int upper);
+bool revealCurrent();
 bool checkWin();
 
 void init();
@@ -87,6 +89,8 @@ int wmain() {
 					else if (e.button.x > 12 * MULT && e.button.x < SCREEN_WIDTH - 12 * MULT && e.button.y > 50 * MULT && e.button.y < SCREEN_HEIGHT - 12 * MULT) {
 						int mouseX = (e.button.x - 12 * MULT) / (16 * MULT);
 						int mouseY = (e.button.y - 50 * MULT) / (16 * MULT);
+						currentSelect[0] = mouseY;
+						currentSelect[1] = mouseX;
 						if (!checkWin() && !firstClick) {
 							firstClick = true;
 							generateMines(MINES, mouseX, mouseY);
@@ -97,6 +101,8 @@ int wmain() {
 							//testReveal();
 						}
 						else if (!checkWin() && !allCells[mouseY][mouseX].getRev()) {
+							currentSelect[0] = mouseY;
+							currentSelect[1] = mouseX;
 							if (allCells[mouseY][mouseX].getFlag() == false) {
 								allCells[mouseY][mouseX].setRev(true);
 								currentState = CLICK;
@@ -114,11 +120,20 @@ int wmain() {
 					}
 				}
 				else if (e.button.button == SDL_BUTTON_RIGHT) {
-					if(!checkWin() && !sadFace){
+					if (!checkWin() && !sadFace) {
 						if (firstClick && e.button.x > 12 * MULT && e.button.x < SCREEN_WIDTH - 12 * MULT && e.button.y > 50 * MULT && e.button.y < SCREEN_HEIGHT - 12 * MULT) {
 							int mouseX = (e.button.x - 12 * MULT) / (16 * MULT);
 							int mouseY = (e.button.y - 50 * MULT) / (16 * MULT);
-							if (allCells[mouseY][mouseX].getRev() == false && allCells[mouseY][mouseX].getFlag() == false) {
+							if (currentSelect[0] == mouseY && currentSelect[1] == mouseX) {
+								if (!revealCurrent()) {
+									sadFace = true;
+									currentState = LOSE;
+									endGame();
+									revealAll();
+								}
+								revealEmpty();
+							}
+							else if (allCells[mouseY][mouseX].getRev() == false && allCells[mouseY][mouseX].getFlag() == false) {
 								allCells[mouseY][mouseX].setFlag(true);
 								Cell::numFlags++;
 							}
@@ -139,8 +154,6 @@ int wmain() {
 		drawBorder();
 		drawSmile();
 		drawCells();
-
-
 
 		SDL_RenderPresent(LTexture::gRenderer);
 
@@ -406,6 +419,9 @@ void endGame()
 			}
 		}
 	}
+
+	currentSelect[0] = -1;
+	currentSelect[1] = -1;
 }
 
 void revealAll()
@@ -452,6 +468,97 @@ void smileState(int &cycle, int upper)
 		}
 		upper = 250;
 	}
+}
+
+bool revealCurrent()
+{
+	bool ok = true;
+	int i = currentSelect[0];
+	int j = currentSelect[1];
+	if (allCells[i][j].getRev() == true) {
+		if (i - 1 >= 0 && j - 1 >= 0) {
+			allCells[i - 1][j - 1].setRev(true);
+			if (allCells[i - 1][j - 1].getState() == -1 && allCells[i - 1][j - 1].getFlag() == false) {
+				allCells[i - 1][j - 1].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i - 1][j - 1].getFlag() == true) {
+				allCells[i - 1][j - 1].setRev(false);
+			}
+		}
+		if (i - 1 >= 0) {
+			allCells[i - 1][j].setRev(true);
+			if (allCells[i - 1][j].getState() == -1 && allCells[i - 1][j].getFlag() == false) {
+				allCells[i - 1][j].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i - 1][j].getFlag() == true) {
+				allCells[i - 1][j].setRev(false);
+			}
+		}
+		if (i - 1 >= 0 && j + 1 < wCells) {
+			allCells[i - 1][j + 1].setRev(true);
+			if (allCells[i - 1][j + 1].getState() == -1 && allCells[i - 1][j + 1].getFlag() == false) {
+				allCells[i - 1][j + 1].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i - 1][j + 1].getFlag() == true) {
+				allCells[i - 1][j + 1].setRev(false);
+			}
+		}
+		if (j - 1 >= 0) {
+			allCells[i][j - 1].setRev(true);
+			if (allCells[i][j - 1].getState() == -1 && allCells[i][j - 1].getFlag() == false) {
+				allCells[i][j - 1].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i][j - 1].getFlag() == true) {
+				allCells[i][j - 1].setRev(false);
+			}
+		}
+		if (j + 1 < wCells) {
+			allCells[i][j + 1].setRev(true);
+			if (allCells[i][j + 1].getState() == -1 && allCells[i][j + 1].getFlag() == false) {
+				allCells[i][j + 1].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i][j + 1].getFlag() == true) {
+				allCells[i][j + 1].setRev(false);
+			}
+		}
+		if (i + 1 < hCells && j - 1 >= 0) {
+			allCells[i + 1][j - 1].setRev(true);
+			if (allCells[i + 1][j - 1].getState() == -1 && allCells[i + 1][j - 1].getFlag() == false) {
+				allCells[i + 1][j - 1].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i + 1][j - 1].getFlag() == true) {
+				allCells[i + 1][j - 1].setRev(false);
+			}
+		}
+		if (i + 1 < hCells) {
+			allCells[i + 1][j].setRev(true);
+			if (allCells[i + 1][j].getState() == -1 && allCells[i + 1][j].getFlag() == false) {
+				allCells[i + 1][j].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i + 1][j].getFlag() == true) {
+				allCells[i + 1][j].setRev(false);
+			}
+		}
+		if (i + 1 < hCells && j + 1 < wCells) {
+			allCells[i + 1][j + 1].setRev(true);
+			if (allCells[i + 1][j + 1].getState() == -1 && allCells[i + 1][j + 1].getFlag() == false) {
+				allCells[i + 1][j + 1].setState(-2);
+				ok = false;
+			}
+			else if (allCells[i + 1][j + 1].getFlag() == true) {
+				allCells[i + 1][j + 1].setRev(false);
+			}
+		}
+	}
+
+	return ok;
 }
 
 bool checkWin()

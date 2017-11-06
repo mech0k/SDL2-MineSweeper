@@ -1,52 +1,52 @@
 ﻿  main.cpp
-main.cpp(160): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(163): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(166): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(169): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(172): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(175): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(178): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(181): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(184): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(187): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(190): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(193): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(224): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(227): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(227): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(229): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(229): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(235): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(235): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(236): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(236): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(241): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(241): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(244): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(244): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(246): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(246): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(252): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(252): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(253): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(253): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(173): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(176): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(179): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(182): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(185): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(188): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(191): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(194): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(197): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(200): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(203): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(206): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(237): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(240): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(240): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(242): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(242): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(248): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(248): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(249): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(249): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(254): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(254): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 main.cpp(257): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
 main.cpp(257): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(260): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(260): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(262): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(262): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(267): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(267): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(291): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(291): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(294): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-main.cpp(294): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(298): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(321): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+main.cpp(259): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(259): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(265): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(265): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(266): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(266): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(270): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(270): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(273): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(273): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(275): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(275): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(280): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(280): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(304): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(304): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(307): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+main.cpp(307): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(311): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(334): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating code
-  1 of 92 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  11 of 93 functions (11.8%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   MineSweeper.vcxproj -> D:\All Projects\GitHub\SDL2-MineSweeper\MineSweeper\MineSweeper\Release\MineSweeper.exe
