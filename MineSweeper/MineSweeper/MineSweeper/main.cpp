@@ -62,7 +62,7 @@ bool endGameBool = false;
 bool sadFace = false;
 
 
-int wmain() {
+int wmain(int argc, char** argv) {
 
 	FreeConsole();
 
